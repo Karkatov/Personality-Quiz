@@ -31,7 +31,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="JEv-A0-uzc" kind="show" id="eHK-wA-5xM"/>
+                                            <segue destination="JEv-A0-uzc" kind="presentation" modalPresentationStyle="fullScreen" id="eHK-wA-5xM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,11 +88,11 @@
             <objects>
                 <viewController id="DYw-WA-GtW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzm-Fz-xxa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="12d-Vx-O4d">
-                                <rect key="frame" x="16" y="299" width="343" height="120.5"/>
+                                <rect key="frame" x="16" y="287" width="343" height="120.5"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-WN-fnz">
                                         <rect key="frame" x="18" y="0.0" width="307" height="34"/>
@@ -130,16 +130,16 @@
                                 </constraints>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbv-EW-krL">
-                                <rect key="frame" x="0.0" y="108" width="375" height="4"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какую пищу вы предпочитаете?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eql-rT-EeD">
-                                <rect key="frame" x="16" y="127" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="115" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-Jm-Y47">
-                                <rect key="frame" x="16" y="197" width="343" height="253"/>
+                                <rect key="frame" x="16" y="207" width="343" height="253"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="iv5-77-uXd">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
@@ -206,7 +206,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="qPT-FP-bBT">
-                                <rect key="frame" x="16" y="222.5" width="343" height="202"/>
+                                <rect key="frame" x="16" y="232.5" width="343" height="202"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxs-fE-QXK">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
@@ -269,11 +269,11 @@
             <objects>
                 <viewController id="Ux5-xX-10L" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fij-RB-AVZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="SSS-W6-Pn6">
-                                <rect key="frame" x="16" y="226" width="343" height="195"/>
+                                <rect key="frame" x="16" y="236" width="343" height="195"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐶!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-6K-IJr">
                                         <rect key="frame" x="88" y="0.0" width="167.5" height="56.5"/>
@@ -314,7 +314,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MjB-W7-oKf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="V4N-Fn-PVy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
