@@ -45,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA290CB42745200A0037150E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA5BE4A42745117E000DD8D4 /* AppDelegate.swift */,
+				FA5BE4A62745117E000DD8D4 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA290CB52745201A0037150E /* Resurses */ = {
+			isa = PBXGroup;
+			children = (
+				FA5BE4AD27451180000DD8D4 /* Assets.xcassets */,
+			);
+			path = Resurses;
+			sourceTree = "<group>";
+		};
 		FA5BE4982745117E000DD8D4 = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +84,8 @@
 				FA5BE4C0274516CB000DD8D4 /* Model */,
 				FA5BE4C127451722000DD8D4 /* View */,
 				FA5BE4C227451738000DD8D4 /* Controller */,
-				FA5BE4A42745117E000DD8D4 /* AppDelegate.swift */,
-				FA5BE4A62745117E000DD8D4 /* SceneDelegate.swift */,
-				FA5BE4AD27451180000DD8D4 /* Assets.xcassets */,
+				FA290CB42745200A0037150E /* Supporting Files */,
+				FA290CB52745201A0037150E /* Resurses */,
 				FA5BE4B227451180000DD8D4 /* Info.plist */,
 			);
 			path = "Personality-Quiz";
