@@ -289,23 +289,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxx-4O-d3U">
-                                <rect key="frame" x="16" y="619" width="382" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Поделиться с результатами"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zm2-sI-2lv"/>
                         <color key="backgroundColor" red="0.92128556966781616" green="0.80854571934212327" blue="0.85495351874743553" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="SSS-W6-Pn6" firstAttribute="centerX" secondItem="fij-RB-AVZ" secondAttribute="centerX" id="3DJ-Tj-ggi"/>
                             <constraint firstItem="Zm2-sI-2lv" firstAttribute="trailing" secondItem="SSS-W6-Pn6" secondAttribute="trailing" constant="16" id="Uzl-KY-idP"/>
-                            <constraint firstItem="Zm2-sI-2lv" firstAttribute="bottom" secondItem="Uxx-4O-d3U" secondAttribute="bottom" constant="85" id="W7Y-KI-UQE"/>
                             <constraint firstItem="SSS-W6-Pn6" firstAttribute="centerY" secondItem="fij-RB-AVZ" secondAttribute="centerY" id="acO-Co-s6U"/>
                             <constraint firstItem="SSS-W6-Pn6" firstAttribute="leading" secondItem="Zm2-sI-2lv" secondAttribute="leading" constant="16" id="hCo-pB-i0b"/>
-                            <constraint firstItem="Zm2-sI-2lv" firstAttribute="trailing" secondItem="Uxx-4O-d3U" secondAttribute="trailing" constant="16" id="hOB-bN-41T"/>
-                            <constraint firstItem="Uxx-4O-d3U" firstAttribute="leading" secondItem="Zm2-sI-2lv" secondAttribute="leading" constant="16" id="phy-YL-dOE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="ksb-C0-rEh">
