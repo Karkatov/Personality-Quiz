@@ -92,31 +92,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="12d-Vx-O4d">
-                                <rect key="frame" x="16" y="287" width="382" height="120.33333333333331"/>
+                                <rect key="frame" x="16" y="287" width="382" height="138.33333333333337"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qBv-WN-fnz">
-                                        <rect key="frame" x="18" y="0.0" width="346" height="34"/>
+                                        <rect key="frame" x="18" y="0.0" width="346" height="40"/>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="72B-Yd-OLW">
-                                        <rect key="frame" x="16" y="50" width="350" height="20.333333333333329"/>
+                                        <rect key="frame" x="16" y="56.000000000000007" width="350" height="26.333333333333336"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Ненавижу" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIy-au-Ioh">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="26.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обожаю" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAt-Q8-K8V">
-                                                <rect key="frame" x="283" y="0.0" width="67" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="265" y="0.0" width="85" height="26.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eH7-TU-qFx">
-                                        <rect key="frame" x="154" y="87.333333333333314" width="74" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="144.66666666666666" y="99.333333333333314" width="93" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Ответить"/>
                                     </button>
@@ -252,12 +252,6 @@
                             <constraint firstItem="qir-1m-bhz" firstAttribute="trailing" secondItem="12d-Vx-O4d" secondAttribute="trailing" constant="16" id="rKk-e7-5fp"/>
                             <constraint firstItem="12d-Vx-O4d" firstAttribute="top" secondItem="qir-1m-bhz" secondAttribute="top" constant="191" id="wzI-gT-POA"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="12d-Vx-O4d"/>
-                                <exclude reference="qPT-FP-bBT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="63Z-jt-5DT">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Ng9-Rd-gnC"/>
@@ -265,6 +259,9 @@
                     <connections>
                         <outlet property="multipleStackView" destination="rXO-Jm-Y47" id="E6G-5K-m3b"/>
                         <outlet property="questionLabel" destination="Eql-rT-EeD" id="OSK-Z2-9Z1"/>
+                        <outlet property="questionProgressView" destination="bbv-EW-krL" id="R4q-sM-bP7"/>
+                        <outlet property="rangedSlider" destination="qBv-WN-fnz" id="DfW-VF-2ai"/>
+                        <outlet property="rangedStackView" destination="12d-Vx-O4d" id="0bv-H0-WhJ"/>
                         <outlet property="singleStackView" destination="qPT-FP-bBT" id="nCf-YH-D1Z"/>
                         <outletCollection property="singleButtons" destination="Mxs-fE-QXK" collectionClass="NSMutableArray" id="1Hx-U2-LQw"/>
                         <outletCollection property="singleButtons" destination="w4U-LH-B4J" collectionClass="NSMutableArray" id="Z8p-wM-utD"/>
@@ -278,6 +275,8 @@
                         <outletCollection property="multipleSwithces" destination="75I-LH-rBY" collectionClass="NSMutableArray" id="b76-NE-miI"/>
                         <outletCollection property="multipleSwithces" destination="SrF-oX-r3f" collectionClass="NSMutableArray" id="hW4-Rr-zcJ"/>
                         <outletCollection property="multipleSwithces" destination="5v0-3J-I0U" collectionClass="NSMutableArray" id="ewW-QP-HCa"/>
+                        <outletCollection property="rangedLabels" destination="XIy-au-Ioh" collectionClass="NSMutableArray" id="1QJ-bc-XHE"/>
+                        <outletCollection property="rangedLabels" destination="zAt-Q8-K8V" collectionClass="NSMutableArray" id="Vee-QV-eCg"/>
                         <segue destination="Ux5-xX-10L" kind="show" identifier="resultSegue" id="DCI-R9-unr"/>
                     </connections>
                 </viewController>

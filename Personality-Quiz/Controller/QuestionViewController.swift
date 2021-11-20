@@ -9,6 +9,8 @@ import UIKit
 
 class QuestionViewController: UIViewController {
    
+    // MARK: - IB Outlets
+    
     // Single
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var singleStackView: UIStackView!
@@ -18,20 +20,28 @@ class QuestionViewController: UIViewController {
     //Multiple
     @IBOutlet weak var multipleStackView: UIStackView!
     @IBOutlet var multipleLabels: [UILabel]!
-    
     @IBOutlet var multipleSwithces: [UISwitch]!
     
+    //Range
+    @IBOutlet weak var rangedStackView: UIStackView!
+    @IBOutlet var rangedLabels: [UILabel]!
+    @IBOutlet weak var rangedSlider: UISlider!
+    
+    //ProgressView
+    @IBOutlet weak var questionProgressView: UIProgressView!
     
     
+    // MARK: - Private Properties
     private let question = Question.getQuestions()
-    
+    private var questionIndex = 0
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateUI()
+    
     }
     
 
@@ -44,5 +54,15 @@ class QuestionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    
+    // MARK: - Private Methods
+    private func updateUI() {
+        for stackViews in [singleStackView, multipleStackView, rangedStackView] {
+            stackViews?.isHidden = true
+        }
+    
+    }
+    
 }
