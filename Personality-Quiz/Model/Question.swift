@@ -9,8 +9,10 @@ struct Question {
     let text: String 
     let type: ResponseType
     let answers: [Answer]
-
-    func getQuestions() -> [Question] {
+}
+    
+extension Question {
+        static func getQuestions() -> [Question] {
         return [
             Question(
                 text: "Какую пищу вы предпочитаете?",
