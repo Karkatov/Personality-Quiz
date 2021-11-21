@@ -58,11 +58,27 @@ class QuestionViewController: UIViewController {
     
     
     // MARK: - Private Methods
+    
+    //Update user interface
     private func updateUI() {
+        //hide everything
         for stackViews in [singleStackView, multipleStackView, rangedStackView] {
             stackViews?.isHidden = true
         }
-    
+        // get current question
+        let currentQuestion = question[questionIndex]
+        
+        // set current question for question label
+        questionLabel.text = currentQuestion.text
+       
+        // Calculate progress
+        let totalProgress = Float(questionIndex / question.count)
+        
+        // Set progress for question progress view
+        questionProgressView.setProgress(totalProgress, animated: true)
+        
+        
+        title = "Вопрос № \(questionIndex + 1) из \(question.count)"
     }
     
 }
