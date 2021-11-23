@@ -34,9 +34,11 @@ class QuestionViewController: UIViewController {
     // MARK: - Private Properties
     private let question = Question.getQuestions()
     private var questionIndex = 0
+    private var  answerChosen: [Answer] = []
     private var currentAnswers: [Answer] {
         question[questionIndex].answers
     }
+    
     
     
     
@@ -71,16 +73,20 @@ extension QuestionViewController {
         
         
         title = "Вопрос № \(questionIndex + 1) из \(question.count)"
+    
+        showCurrentStackView(for: currentQuestion.type)
     }
+    
+    
     
     private func showCurrentStackView(for type: ResponseType) {
         switch type {
         case .single : showSingleStackView(with: currentAnswers)
             break
-        case .multiple :
-            <#code#>
-        case .ranged :
-            <#code#>
+        case .multiple : showMultipleStackView(with: currentAnswers)
+            break
+        case .ranged : showRangeStackView(with: currentAnswers)
+            break
         }
     }
 
@@ -95,9 +101,20 @@ extension QuestionViewController {
     private func showMultipleStackView(with answers: [Answer]) {
         multipleStackView.isHidden = false
         
+        for (label, answer) in zip(multipleLabels, answers) {
+            label.text = answer.text
+            
+        }
         
     }
 
+    private func showRangeStackView(with answers: [Answer]) {
+        rangedStackView.isHidden = false
+        
+        rangedLabels.first?.text = answers.first?.text
+        rangedLabels.last?.text = answers.last?.text
+        
+    }
 }
     
     
