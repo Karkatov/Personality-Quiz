@@ -34,7 +34,9 @@ class QuestionViewController: UIViewController {
     // MARK: - Private Properties
     private let question = Question.getQuestions()
     private var questionIndex = 0
-
+    private var currentAnswers: [Answer] {
+        question[questionIndex].answers
+    }
     
     
     
@@ -71,6 +73,34 @@ extension QuestionViewController {
         title = "Вопрос № \(questionIndex + 1) из \(question.count)"
     }
     
+    private func showCurrentStackView(for type: ResponseType) {
+        switch type {
+        case .single : showSingleStackView(with: currentAnswers)
+            break
+        case .multiple :
+            <#code#>
+        case .ranged :
+            <#code#>
+        }
+    }
+
+    private func showSingleStackView(with answers: [Answer]) {
+        singleStackView.isHidden = false
+        for (button, answer) in zip(singleButtons, answers) {
+            button.setTitle(answer.text, for: .normal)
+            
+        }
+    }
+
+    private func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden = false
+        
+        
+    }
+
 }
-
-
+    
+    
+    
+    
+    
