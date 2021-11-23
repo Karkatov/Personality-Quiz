@@ -2,7 +2,7 @@
 //  QuestionViewController.swift
 //  Personality-Quiz
 //
-//  Created by Duxxless Macbook on 20.11.2021.
+//  Created by Duxxless on 20.11.2021.
 //
 
 import UIKit
@@ -34,43 +34,33 @@ class QuestionViewController: UIViewController {
     // MARK: - Private Properties
     private let question = Question.getQuestions()
     private var questionIndex = 0
-    
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-    
     }
+}
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    
-    // MARK: - Private Methods
+    // MARK: - Private
+extension QuestionViewController {
     
     //Update user interface
     private func updateUI() {
-        //hide everything
+        // Hide everything
         for stackViews in [singleStackView, multipleStackView, rangedStackView] {
             stackViews?.isHidden = true
         }
-        // get current question
+        // Get current question
         let currentQuestion = question[questionIndex]
         
-        // set current question for question label
+        // Set current question for question label
         questionLabel.text = currentQuestion.text
-       
+        
         // Calculate progress
         let totalProgress = Float(questionIndex / question.count)
         
@@ -82,3 +72,5 @@ class QuestionViewController: UIViewController {
     }
     
 }
+
+
