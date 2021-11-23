@@ -45,9 +45,28 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+ 
+    }
+
+    @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
+        guard let currentIndex = singleButtons.firstIndex(of: sender)
+        else {
+            return }
+        
+        let currentAnswer = currentAnswers[currentIndex]
+        answerChosen.append(currentAnswer)
+    }
+    
+    
+    @IBAction func multipleAnswerPressed() {
+    }
+    
+    @IBAction func rangedAnswerButtonPressed() {
     }
 }
     
+
+
 
 
     // MARK: - Private

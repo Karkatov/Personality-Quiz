@@ -119,6 +119,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="DYw-WA-GtW" eventType="touchUpInside" id="29P-9T-YnK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -202,6 +205,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerPressed" destination="DYw-WA-GtW" eventType="touchUpInside" id="Wzt-Tp-goU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -212,21 +218,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="DYw-WA-GtW" eventType="touchUpInside" id="G9z-ot-8pq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4U-LH-B4J">
                                         <rect key="frame" x="0.0" y="57" width="382" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="DYw-WA-GtW" eventType="touchUpInside" id="13H-kq-Oi0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVd-O6-OWp">
                                         <rect key="frame" x="0.0" y="114" width="382" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="DYw-WA-GtW" eventType="touchUpInside" id="kaG-U5-OSW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uxI-s1-JuV">
                                         <rect key="frame" x="0.0" y="171" width="382" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="singleButtonAnswerPressed:" destination="DYw-WA-GtW" eventType="touchUpInside" id="N7G-aj-uXM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
