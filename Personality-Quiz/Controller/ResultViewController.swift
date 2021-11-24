@@ -30,7 +30,6 @@ class ResultViewController: UIViewController {
         var countRabbit = 0
         var countTurtle = 0
         
-        
         for oneAnswer in answersArray {
             switch oneAnswer.type {
             case .dog : countDog += 1
