@@ -109,7 +109,7 @@ extension QuestionViewController {
         
         // Calculate progress
         let totalProgress = Float(questionIndex) / Float(question.count)
-       
+        
         
         // Set progress for question progress view
         ProgressView.setProgress(totalProgress, animated: true)
@@ -160,7 +160,7 @@ extension QuestionViewController {
     }
     
     
-    private func nextQuestion() {
+    private func         nextQuestion() {
         
         questionIndex += 1
         
@@ -170,20 +170,14 @@ extension QuestionViewController {
         }
         
         // Open next controller
-       
-        
-       func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showResult" {
-                let resultVC = segue.destination as! ResultViewController
-                
-                for answer in answerChosen {
-                resultVC.answersArray.append(answer)
-                    resultVC.avar = "Hello"
-                }
-                
-            }
+        performSegue(withIdentifier: "showResult", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showResult" {
+            let resultVC = segue.destination as! ResultViewController
+            resultVC.answersArray = answerChosen
+            
         }
-            performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
 
