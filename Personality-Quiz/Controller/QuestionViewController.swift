@@ -8,7 +8,7 @@
 import UIKit
 
 class QuestionViewController: UIViewController {
-   
+    
     // MARK: - IB Outlets
     
     // Single
@@ -28,7 +28,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var rangedSlider: UISlider!
     
     //ProgressView
-    @IBOutlet weak var questionProgressView: UIProgressView!
+    @IBOutlet weak var ProgressView: UIProgressView!
     
     
     // MARK: - Private Properties
@@ -40,36 +40,48 @@ class QuestionViewController: UIViewController {
     }
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
- 
+        
     }
-
+    
     @IBAction func singleButtonAnswerPressed(_ sender: UIButton) {
-        guard let currentIndex = singleButtons.firstIndex(of: sender)
-        else {
-            return }
+        
+        // Array of Answers
+        let currentAnswers = question[questionIndex].answers
+        
+        // Current index button
+        guard let currentIndex = singleButtons.firstIndex(of: sender) else { return }
         
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
+        
+        newQuestion()
+        
     }
     
     
     @IBAction func multipleAnswerPressed() {
+        for (multipleSwitch, answer) in zip(multipleSwithces, currentAnswers) {
+                if multipleSwitch.isOn {
+                    answerChosen.append(answer)
+                
+            }
+        }
+        
+        newQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
     }
 }
-    
 
 
 
 
-    // MARK: - Private
+
+// MARK: - Private
 extension QuestionViewController {
     
     //Update user interface
@@ -85,14 +97,15 @@ extension QuestionViewController {
         questionLabel.text = currentQuestion.text
         
         // Calculate progress
-        let totalProgress = Float(questionIndex / question.count)
+        let totalProgress = Float(questionIndex) / Float(question.count)
+       
         
         // Set progress for question progress view
-        questionProgressView.setProgress(totalProgress, animated: true)
+        ProgressView.setProgress(totalProgress, animated: true)
         
         
         title = "Вопрос № \(questionIndex + 1) из \(question.count)"
-    
+        
         showCurrentStackView(for: currentQuestion.type)
     }
     
@@ -108,7 +121,7 @@ extension QuestionViewController {
             break
         }
     }
-
+    
     private func showSingleStackView(with answers: [Answer]) {
         singleStackView.isHidden = false
         for (button, answer) in zip(singleButtons, answers) {
@@ -116,7 +129,7 @@ extension QuestionViewController {
             
         }
     }
-
+    
     private func showMultipleStackView(with answers: [Answer]) {
         multipleStackView.isHidden = false
         
@@ -126,7 +139,7 @@ extension QuestionViewController {
         }
         
     }
-
+    
     private func showRangeStackView(with answers: [Answer]) {
         rangedStackView.isHidden = false
         
@@ -134,9 +147,22 @@ extension QuestionViewController {
         rangedLabels.last?.text = answers.last?.text
         
     }
+    
+    
+    private func newQuestion() {
+        
+        questionIndex += 1
+        
+        if questionIndex < question.count {
+            updateUI()
+            return
+        }
+        
+        performSegue(withIdentifier: "showResult", sender: nil)
+    }
 }
-    
-    
-    
-    
-    
+
+
+
+
+
