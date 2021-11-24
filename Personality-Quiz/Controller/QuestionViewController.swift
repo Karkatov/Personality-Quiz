@@ -25,7 +25,12 @@ class QuestionViewController: UIViewController {
     //Range
     @IBOutlet weak var rangedStackView: UIStackView!
     @IBOutlet var rangedLabels: [UILabel]!
-    @IBOutlet weak var rangedSlider: UISlider!
+    @IBOutlet weak var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.value = answerCount
+        }
+    }
     
     //ProgressView
     @IBOutlet weak var ProgressView: UIProgressView!
@@ -57,7 +62,7 @@ class QuestionViewController: UIViewController {
         let currentAnswer = currentAnswers[currentIndex]
         answerChosen.append(currentAnswer)
         
-        newQuestion()
+                nextQuestion()
         
     }
     
@@ -70,11 +75,17 @@ class QuestionViewController: UIViewController {
             }
         }
         
-        newQuestion()
+                nextQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
+        let index = Int(rangedSlider.value)
+        print(index)
+        answerChosen.append(currentAnswers[index])
+    
+        nextQuestion()
     }
+
 }
 
 
@@ -149,7 +160,7 @@ extension QuestionViewController {
     }
     
     
-    private func newQuestion() {
+    private func         nextQuestion() {
         
         questionIndex += 1
         
