@@ -340,13 +340,12 @@
                     <navigationItem key="navigationItem" title="Результаты" id="ksb-C0-rEh">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="1MR-Wr-1lo">
                             <connections>
-                                <segue destination="1BV-Yj-2mw" kind="unwind" unwindAction="unwindSegue:" id="ov0-rR-Gni"/>
+                                <action selector="showAlert" destination="Ux5-xX-10L" id="bJD-9W-jeF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYx-Gy-987" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="1BV-Yj-2mw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2175.36231884058" y="59.510869565217398"/>
         </scene>

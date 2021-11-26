@@ -45,6 +45,18 @@ class ResultViewController: UIViewController {
         }
     }
     
-    
-    
+    //create alert
+    @IBAction func showAlert() {
+        let alertController = UIAlertController(title: "Ура, вы прошли тест!", message: "Хотите повторить?", preferredStyle: .alert)
+        
+        //create button
+        let actionYes = UIAlertAction(title: "Yes", style: .default, handler: nil)
+        let actionNo = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        alertController.addAction(actionYes)
+        alertController.addAction(actionNo)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+
 }
