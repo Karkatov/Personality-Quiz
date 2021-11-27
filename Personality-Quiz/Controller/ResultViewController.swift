@@ -35,9 +35,14 @@ class ResultViewController: UIViewController {
         let sorteDictionaryOfAnimals = dictionaryOfAnimals.sorted {$0.value > $1.value }
         guard let mostDictionaryOfAnimal = sorteDictionaryOfAnimals.first?.key else { return }
         
-        mostDictionaryOfAnimal
+        updateUI(with: mostDictionaryOfAnimal)
+        
     }
     
+    private func updateUI(with animal: AnimalType) {
+        resultAnswerLabel.text = "Вы \(animal.rawValue)"
+        resultDefinitionLabel.text = "\(animal.definition)"
+    }
     
     // Hide butoon back
     private func hideBackButton() {
