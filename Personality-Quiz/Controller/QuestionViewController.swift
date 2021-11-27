@@ -39,7 +39,7 @@ class QuestionViewController: UIViewController {
     // MARK: - Private Properties
     private let question = Question.getQuestions()
     private var questionIndex = 0
-    private var  answerChosen: [Answer] = []
+    private var answerChosen: [Answer] = []
     private var currentAnswers: [Answer] {
         question[questionIndex].answers
     }
