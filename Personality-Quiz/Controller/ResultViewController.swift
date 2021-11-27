@@ -34,6 +34,7 @@ class ResultViewController: UIViewController {
         }
         let sorteDictionaryOfAnimals = dictionaryOfAnimals.sorted {$0.value > $1.value }
         guard let mostDictionaryOfAnimal = sorteDictionaryOfAnimals.first?.key else { return }
+        
         mostDictionaryOfAnimal
     }
     
