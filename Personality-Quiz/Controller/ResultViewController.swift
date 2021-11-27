@@ -28,10 +28,13 @@ class ResultViewController: UIViewController {
     
     private func updateResult() {
         var dictionaryOfAnimals: [AnimalType: Int] = [:]
-        var animals = answersArray.map { $0.type }
+        let animals = answersArray.map { $0.type }
         for animal in animals {
             dictionaryOfAnimals[animal] = (dictionaryOfAnimals[animal] ?? 0) + 1
         }
+        let sorteDictionaryOfAnimals = dictionaryOfAnimals.sorted {$0.value > $1.value }
+        guard let mostDictionaryOfAnimal = sorteDictionaryOfAnimals.first?.key else { return }
+        mostDictionaryOfAnimal
     }
     
     
