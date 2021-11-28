@@ -27,13 +27,17 @@ class ResultViewController: UIViewController {
     }
     
     private func updateResult() {
+        // Add empty dictionary
         var dictionaryOfAnimals: [AnimalType: Int] = [:]
+        // create array of type AnimalType
         let animals = answersArray.map { $0.type }
+        
         for animal in animals {
             dictionaryOfAnimals[animal] = (dictionaryOfAnimals[animal] ?? 0) + 1
         }
-        let sorteDictionaryOfAnimals = dictionaryOfAnimals.sorted {$0.value > $1.value }
-        guard let mostDictionaryOfAnimal = sorteDictionaryOfAnimals.first?.key else { return }
+        
+        let sortedDictionaryOfAnimals = dictionaryOfAnimals.sorted {$0.value > $1.value }
+        guard let mostDictionaryOfAnimal = sortedDictionaryOfAnimals.first?.key else { return }
         
         updateUI(with: mostDictionaryOfAnimal)
         
@@ -44,9 +48,9 @@ class ResultViewController: UIViewController {
         resultDefinitionLabel.text = "\(animal.definition)"
     }
     
-    // Hide butoon back
+    // Hide button back
     private func hideBackButton() {
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.setHidesBackButton(true, animated: true)
     }
     
     
@@ -60,12 +64,10 @@ class ResultViewController: UIViewController {
         let actionYes = UIAlertAction(title: "Yes", style: .default, handler: nil)
         let actionNo = UIAlertAction(title: "No", style: .default, handler: nil)
         
-        
         alertController.addAction(actionYes)
         alertController.addAction(actionNo)
         
-        
-        self.present(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
 
 }
