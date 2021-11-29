@@ -341,6 +341,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="1MR-Wr-1lo">
                             <connections>
                                 <action selector="showAlert" destination="Ux5-xX-10L" id="bJD-9W-jeF"/>
+                                <segue destination="lek-w5-h3W" kind="unwind" unwindAction="unwindSegue:" id="j8Y-zx-Mgn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -350,6 +351,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYx-Gy-987" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lek-w5-h3W" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2175.36231884058" y="59.510869565217398"/>
         </scene>

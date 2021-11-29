@@ -160,7 +160,7 @@ extension QuestionViewController {
     }
     
     
-    private func         nextQuestion() {
+    private func nextQuestion() {
         
         questionIndex += 1
         
