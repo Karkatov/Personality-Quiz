@@ -63,9 +63,7 @@ class QuestionViewController: UIViewController {
         answerChosen.append(currentAnswer)
         
                 nextQuestion()
-        
     }
-    
     
     @IBAction func multipleAnswerPressed() {
         for (multipleSwitch, answer) in zip(multipleSwithces, currentAnswers) {
